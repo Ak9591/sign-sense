@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Sign Language Recognition System</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; /* Updated to column layout */
+            height: 100vh;
+            margin: 0;
+            background-color: #DF826C; /* Set your desired background color */
+        }
+
+        h1 {
+            margin-bottom: 20px; /* Add some space below the title */
+            
+            background-size: cover;
+            color: transparent; /* Hide text to make the background image visible */
+            text-align: center;
+            padding: 50px; /* Adjust padding as needed */
+            color: black;
+        }
+
+        #video-container {
+            position: relative;
+            width: 640px; /* Adjust the width as needed */
+            height: 480px; /* Adjust the height as needed */
+            overflow: hidden;
+            border: dashed;
+        }
+
+        #video-feed {
+            width: 100%;
+            height: 100%;
+        }
+
+        p {
+            margin-top: 20px; /* Add space above the paragraph */
+            text-align: center;
+            color: white; /* Set text color for the paragraph */
+        }
+    </style>
+</head>
+<body>
+    <h1>Indian Sign Language Recognition System</h1>
+    <div id="video-container">
+        <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Video Feed">
+    </div>
+    <div>
+        <p style='color:black'> Currently, this version works for only Numbers from 1-9, A-Z, and a few words </p>
+    </div>
+</body>
+</html>
